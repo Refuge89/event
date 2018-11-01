@@ -7,4 +7,4 @@
 	(@guid+1,35);
 	
 	-- Bouquet of Orange Marigolds requires event to use.
-	UPDATE `item_template` SET `HolidayId` = 35 WHERE `entry` = 46861;
+	UPDATE `item_template` SET `HolidayId` = 409 WHERE `entry` = 46861;
