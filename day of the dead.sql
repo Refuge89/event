@@ -212,43 +212,37 @@ INSERT INTO `game_event_creature_data` (`guid`, `entry_id`, `modelid`, `equipmen
 
 -- NPC Vendor & Catrina
 
-INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`) VALUES
-(@guid2+1,34382,0,-9327.6,178.975,616.973,410.484),
-(@guid2+2,34382,1,1180.53,-4465.53,213.293,0.944794),
-(@guid2+3,34382,571,5844.1,764.778,640.546,420.309),
-(@guid2+4,34382,0,1832.47,210.797,60.312,204.222),
-(@guid2+5,34382,530,9406.42,-6864.02,148.942,119.424),
-(@guid2+6,34382,1,10058.2,2133,1329.66,443.788),
-(@guid2+7,34382,1,-989.195,-596.891,274.632,521.191),
-(@guid2+8,34382,530,-4320.01,-12433.4,179.088,51.906),
-(@guid2+9,34382,530,-1805.58,4911.74,-218.346,135.833),
-(@guid2+10,34382,0,-5151.65,-852.495,508.667,458.185),
-(@guid2+11,34383,571,5844.93,762.949,640.713,286.791),
-(@guid2+12,34383,0,1828.96,210.695,602.619,124.504),
-(@guid2+13,34383,530,9403.71,-6861.68,150.351,0.609119),
-(@guid2+14,34383,1,10067,2128.44,1329.66,357.394),
-(@guid2+15,34383,1,-987.397,-586.047,275.876,496.843),
-(@guid2+16,34383,530,-4317.46,-12431.3,17.755,511.599),
-(@guid2+17,34383,530,-1809.42,4913.42,-218.336,0.867451),
-(@guid2+18,34383,0,-5155.07,-854.489,508.115,50.845),
-(@guid2+19,34383,0,-9330.46,180.936,616.792,41.716),
-(@guid2+20,34383,1,1184.43,-4467.28,213.388,12.079);
+SET @newguid := (SELECT MAX(guid) FROM `creature`);
 
-SET @guid3 := (SELECT MAX(guid) FROM `creature`);
-	
-drop procedure if exists doWhile2;
-DELIMITER //  
-CREATE PROCEDURE doWhile2()   
-BEGIN
-WHILE (@guid2 <= @guid3) DO
-    INSERT INTO `game_event_creature` (`guid`, `event`) values (@guid2, 35);
-    SET @guid2 = @guid2+1;
-END WHILE;
-END;
-//  
+-- Chapman - Dalaran
+INSERT INTO creature VALUES (@newguid+1,34382,571,1,1,0,1937,5845.04,759.58,640.976,4.02065,25,0,0,12600,0,0,0);
 
-CALL doWhile2(); 
-drop procedure if exists doWhile2;
+-- Chapman - Durotar
+-- GUID: 48314
+
+-- Chapman - Undercity
+-- GUID: 48313
+
+-- Chapman - Eversong Woods
+INSERT INTO creature VALUES (@newguid+2,34382,530,1,1,0,1937,9410.09,-6837.63,16.2655,1.9587,25,0,0,12600,0,0,0);
+
+-- Chapman - Terokkar Forest
+INSERT INTO creature VALUES (@newguid+3,34382,530,1,1,0,1937,-1789.93,4924.53,-21.7289,2.19354,25,0,0,12600,0,0,0);
+
+-- Chapman - Azuremyst Isle
+INSERT INTO creature VALUES (@newguid+4,34382,530,1,1,0,1937,-4311.2,-12449.9,17.8691,5.86291,25,0,0,12600,0,0,0);
+
+-- Chapman - Darnassus
+-- GUID: 48311
+
+-- Chapman - Elwynn Forest
+-- GUID: 48310
+
+-- Chapman - Dun Morogh
+-- GUID: 48312
+
+-- Chapman - Thunder Bluff
+-- GUID: 48315
 
 -- Commoners
 
