@@ -274,6 +274,18 @@ INSERT INTO creature VALUES (@newguid+8,34383,571,1,1,0,1938,5843.19,761.82,640.
 -- Catrina - Elwynn Forest 
 -- GUID: 48304
 
+-- Adding the missing NPC's to the event creature list
+
+INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
+(@newguid+1, 35),
+(@newguid+2, 35),
+(@newguid+3, 35),
+(@newguid+4, 35),
+(@newguid+5, 35),
+(@newguid+6, 35),
+(@newguid+7, 35),
+(@newguid+8, 35);
+
 -- Commoners
 
 -- SET @guid := (SELECT MAX(guid) FROM `creature`);
