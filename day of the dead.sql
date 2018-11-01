@@ -244,6 +244,36 @@ INSERT INTO creature VALUES (@newguid+4,34382,530,1,1,0,1937,-4311.2,-12449.9,17
 -- Chapman - Thunder Bluff
 -- GUID: 48315
 
+-- Catrina - Thunder Bluff
+-- GUID: 48309
+
+-- Catrina - Dun Morogh
+-- GUID: 48306
+
+-- Catrina - Darnassus 
+-- GUID: 48305
+
+-- Catrina - Azuremyst Isle
+INSERT INTO creature VALUES (@newguid+5,34383,530,1,1,0,1938,-4313.9,-12450.1,17.6373,4.81676,25,0,0,12600,0,0,0);
+
+-- Catrina - Terokkar Forest
+INSERT INTO creature VALUES (@newguid+6,34383,530,1,1,0,1938,-1792,4923.33,-21.7454,2.24851,25,0,0,12600,0,0,0);
+
+-- Catrina - Eversong Woods
+INSERT INTO creature VALUES (@newguid+7,34383,530,1,1,0,1938,9409.97,-6841.33,16.0615,2.50769,25,0,0,12600,0,0,0);
+
+-- Catrina - Undercity
+-- GUID: 48307
+
+-- Catrina - Durotar
+-- GUID: 48308
+
+-- Catrina - Dalaran
+INSERT INTO creature VALUES (@newguid+8,34383,571,1,1,0,1938,5843.19,761.82,640.751,3.87899,25,0,0,12600,0,0,0);
+
+-- Catrina - Elwynn Forest 
+-- GUID: 48304
+
 -- Commoners
 
 -- SET @guid := (SELECT MAX(guid) FROM `creature`);
