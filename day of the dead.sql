@@ -1,5 +1,5 @@
-	SET @guid := (SELECT MAX(guid) FROM `gameobject`);
-	INSERT INTO creature VALUES 
+	SET @guid := (SELECT MAX(guid) FROM `creature`);
+	INSERT INTO `creature` VALUES 
 	(@guid+1,34435,0,1,1,0,0,-9353.79,167.908,61.6253,5.71468,25,0,0,1,0,0,0); -- Cheerful Human Spirit
 	
 	-- Add NPCs to event
