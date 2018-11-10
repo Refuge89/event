@@ -93,19 +93,20 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 	(@guid+90,35254,571,'5850.95','756.541','640.434','2.81294'),
 	(@guid+91,35249,0,'-9327.92','185.507','62.7096','4.07265');
 
-SET @guid2 := (SELECT MAX(guid) FROM `creature`);
-	
-drop procedure if exists doWhile;
-DELIMITER //  
-CREATE PROCEDURE doWhile()   
-BEGIN
-DECLARE i INT DEFAULT @guid; 
-WHILE (i <= @guid2) DO
-    INSERT INTO `game_event_creature` (`guid`, `event`) values (i, 35);
-    SET i = i+1;
-END WHILE;
-END;
-//  
+-- This needs to be changed, Sadly this does not work on SQLyog.
+-- SET @guid2 := (SELECT MAX(guid) FROM `creature`);
+--	
+-- drop procedure if exists doWhile;
+-- DELIMITER //  
+-- CREATE PROCEDURE doWhile()   
+-- BEGIN
+-- DECLARE i INT DEFAULT @guid; 
+-- WHILE (i <= @guid2) DO
+--     INSERT INTO `game_event_creature` (`guid`, `event`) values (i, 35);
+--     SET i = i+1;
+-- END WHILE;
+-- END;
+-- //  
 
 CALL doWhile(); 
 drop procedure if exists doWhile;
@@ -282,4 +283,5 @@ INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
 (@newguid+8, 35);
 
 	-- Bouquet of Orange Marigolds requires event to use.
+	-- Some strange reason HolidayID does not work for items...
 	UPDATE `item_template` SET `HolidayId` = 409 WHERE `entry` = 46861;
