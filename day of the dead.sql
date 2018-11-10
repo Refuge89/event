@@ -108,8 +108,8 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 -- END;
 -- //  
 
-CALL doWhile(); 
-drop procedure if exists doWhile;
+-- CALL doWhile(); 
+--  drop procedure if exists doWhile;
 
 -- Set the correct models / spells for the Ghostly and Cheerfulls
 
